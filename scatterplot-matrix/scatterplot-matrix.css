@@ -1,0 +1,50 @@
+svg {
+    font: 10px sans-serif;
+}
+
+.axis,
+.frame {
+    shape-rendering: crispEdges;
+}
+
+.axis line {
+    stroke: #ddd;
+}
+
+.axis path {
+    display: none;
+}
+
+.cell text {
+    font-weight: 600;
+    fill: black;
+}
+
+.frame {
+    fill: none;
+    stroke: #aaa;
+}
+
+circle {
+    fill-opacity: .7;
+}
+
+circle.hidden {
+    fill: #ccc !important;
+}
+
+.extent {
+    fill: #000;
+    fill-opacity: .125;
+    stroke: #fff;
+}
+
+g.tick {
+    opacity: 0.5;
+}
+
+.back {
+    margin-top:10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}

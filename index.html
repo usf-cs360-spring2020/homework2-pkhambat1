@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- TODO: Change title -->
-    <title>Website Template</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Load Bulma from CDN (consider saving it to repository instead) -->
-    <!-- https://bulma.io/ -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <!-- TODO: Change title -->
+  <title>Understanding the Role of Colleges in Intergenerational Mobility</title>
 
-    <!-- Load Font Awesome 5 (free) icons -->
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  </head>
+  <!-- Load Bulma from CDN (consider saving it to repository instead) -->
+  <!-- https://bulma.io/ -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
 
-  <body>
+  <!-- Load Font Awesome 5 (free) icons -->
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
 
   <!-- Page header -->
   <!-- https://bulma.io/documentation/layout/hero/ -->
   <section class="hero is-primary is-bold">
     <div class="hero-body">
       <div class="container">
-        <!-- TODO: Change title -->
-        <h1 class="title">Website Title</h1>
-        <!-- TODO: Change subtitle -->
-        <h2 class="subtitle">Website Subtitle</h2>
+        <h1 class="title" style="font-size:1.5rem;">Understanding the Role of Colleges in Intergenerational Mobility
+        </h1>
+        <h2 class="subtitle">Using Tableau and D3.js</h2>
       </div>
     </div>
   </section>
@@ -36,8 +37,6 @@
   <nav class="navbar is-light" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
-        <!-- TODO: Change link to repository homepage if needed -->
-        <!-- TODO: Change which navbar-item is-active if needed -->
         <a class="navbar-item is-active" href="index.html">
           <span class="icon"><i class="fas fa-home"></i></span>
           <span>Home</span>
@@ -53,36 +52,21 @@
       <div id="main-menu" class="navbar-menu has-text-weight-medium">
         <!-- Left navbar items -->
         <div class="navbar-start">
-          <a class="navbar-item" href="#data" title="Data">
-            <span class="icon"><i class="fas fa-table"></i></span>
-            <span>Data</span>
-          </a>
 
-          <!-- TODO: Modify or remove dropdown -->
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link">
               Visualizations
             </a>
 
             <div class="navbar-dropdown">
-              <a class="navbar-item">
-                <span class="icon"><i class="fas fa-chart-line"></i></span>
-                <span>Line Chart</span>
-              </a>
-              <a class="navbar-item">
-                <span class="icon"><i class="fas fa-chart-area"></i></span>
-                <span>Area Chart</span>
+              <a class="navbar-item" href="#scatter-plot-matrix">
+                <span>Scatter Plot Matrix (Tableau Prototype)</span>
               </a>
 
               <hr class="navbar-divider">
 
-              <a class="navbar-item">
-                <span class="icon"><i class="fas fa-chart-bar"></i></span>
-                <span>Bar Chart</span>
-              </a>
-              <a class="navbar-item">
-                <span class="icon"><i class="fas fa-chart-pie"></i></span>
-                <span>Pie Chart</span>
+              <a class="navbar-item" href="scatterplot-matrix/scatterplot-matrix.html">
+                <span>Scatter Plot Matrix (D3.js)</span>
               </a>
             </div>
           </div>
@@ -90,8 +74,7 @@
 
         <!-- Right navbar items -->
         <div class="navbar-end">
-          <!-- TODO: Update as needed -->
-          <a class="navbar-item" href="#about" title="About">
+          <a class="navbar-item" href="#grade" title="About">
             <span class="icon"><i class="fas fa-tasks"></i></span>
             <span>Grade</span>
           </a>
@@ -111,219 +94,297 @@
       <!-- Begin page content -->
       <div class="content">
         <h1 class="title">
-          <!-- TODO: Change page title -->
-          Page Title
+          Overview
         </h1>
         <p class="subtitle">
-          <!-- TODO: Change page subtitle -->
-          Page Subtitle
+          Intergenerational Mobility in US Colleges
         </p>
 
-        <p>This would be an excellent place to describe what this page is for, what to find in different sections, describe any motivation or theme behind your visualizations, and so on.</p>
+        <p>This webpage is for visualizing the data about Intergenerational Mobility in US Colleges and draw insights
+          from the same by harnessing the power of data visualization. The original dataset has 85 columns and 2,203
+          rows of
+          records. Hopefully the visualizations are successful in bringing non-trivial findings to the light.</p>
+        <p>Inspiration: <a href="https://opportunityinsights.org/paper/mobilityreportcards/">Mobility Report Cards: The
+            Role of Colleges in Intergenerational Mobility</a></p>
 
-        <p>You should not use this template unless you intend to customize it. Make it your own. Keep in mind this simple template is over 300 lines! You can see other examples of websites using Bulma at their showcase: <a href="https://bulma.io/expo/">bulma.io/expo/</a>.</p>
 
-        <h2 id="data">Data</h2>
 
-        <p>Include some detailed information about the dataset here. You should <a href="#">add a link</a> to the original dataset. You might also want to quote the license:</p>
-
-        <blockquote>
-          <p>
-            "This data is made available under the Public Domain Dedication and License v1.0 whose full text can be found at: <a href="http://www.opendatacommons.org/licenses/pddl/1.0/">www.opendatacommons.org/licenses/pddl/1.0/</a>"
-          </p>
-          <cite>Put a citation here, possibly link to the dataset license information directly.</cite>
-        </blockquote>
-
-        <p>In addition to including a link to the source and license, you should describe the data. You might want a list of some sort to enumerate the different types of columns:</p>
-
-        <ol>
-          <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
-
-          <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
-
-          <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
-
-          <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
-        </ol>
-
-        <p>This will of course differ depending on the assignment and data.</p>
-
-        <h3 id="wrangling">Wrangling</h3>
-
-        <p>Perhaps you had to do some data wrangling to the original dataset to prepare it for visualization. This would be a great place to discuss some of that wrangling.
-
-        <pre>
-You can even put code into these pre blocks.
-  It will preserve whitespace.
-    That is helpful for formatted code.
-        </pre>
-
-        <p>You can alternatively embed a Gist if you want. There is an "embed" button on <a href="https://gist.github.com/octocat/6cad326836d38bd3a7ae">the Gist page</a> and results in something like this:</p>
-
-        <script src="https://gist.github.com/octocat/6cad326836d38bd3a7ae.js"></script>
-
-        <h2 id="visualizations">Visualizations</h2>
-
-        <p>Ideally not everything would be on a single page like this example. Instead, you might want to put each section in its own webpage. You would need to carefully replicate the page template (with the header, navbar, and footer) and make the necessary updates. For example, you want the "About" navbar item to be considered active on an "About" web page.</p>
-
-        <p>For now this is just a demo. The buttons below do not go anywhere, but can be easily changed to link to different visualization pages.</p>
-
-        <p class="buttons">
-          <a class="button is-large is-success" href="#">
-            <span class="icon is-medium">
-              <i class="fas fa-chart-line"></i>
-            </span>
-            <span>Line Chart</span>
-          </a>
-
-          <a class="button is-large is-primary" href="#">
-            <span class="icon is-medium">
-              <i class="fas fa-chart-area"></i>
-            </span>
-            <span>Area Chart</span>
-          </a>
-
-          <a class="button is-large is-info" href="#">
-            <span class="icon is-medium">
-              <i class="fas fa-chart-bar"></i>
-            </span>
-            <span>Bar Chart</span>
-          </a>
-
-          <a class="button is-large is-link" href="#">
-            <span class="icon is-medium">
-              <i class="fas fa-chart-pie"></i>
-            </span>
-            <span>Pie Chart</span>
-          </a>
-        </p>
-
-        <!-- https://github.com/vega/vega-embed#basic-example -->
-        <p>It is possible to embed some visualizations directly here too. Here is <a href="https://github.com/vega/vega-embed#basic-example">an example</a> using Vega-Lite:</p>
-
-        <script src="https://cdn.jsdelivr.net/npm/vega@5.9.0"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.2"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.2.1"></script>
-
-        <div id="vis"></div>
-
-        <script type="text/javascript">
-        var spec = "https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json";
-        vegaEmbed('#vis', spec).then(function(result) {
-          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-        }).catch(console.error);
-        </script>
-
-        <h4>Instructions</h4>
-
-        <p>You will likely need to include instructions on how to interpet and use the visualization. In the case above, if you click the three dots <i class="fas fa-ellipsis-h has-text-grey-light	"></i> above it will open a menu where you can either save the visualization to a SVG or PNG, or alternatively open it up in the online Vega Editor.</p>
-
-        <h4>Discussion</h4>
-
-        <p>You may also need other sections, like a discussion section, per-visualization section on data wrangling, and others. Because of the extra content and code visualizations take, it might be worthwhile to break up your pages into one home page and then one page per visualization.</p>
-
-        <span class="heading">Acknowledgements</span>
+        <h1 id="data">Dataset</h1>
+        <h3><u>Summary</u></h3>
 
         <p>
-          <a href="#">Link to insiration</a><br/>
-          <a href="#">Link to StackOverflow snippet</a>
+          <b>Title:</b> Baseline Cross-Sectional Estimates by College <br />
+          <b>Source:</b> <a
+            href="https://opportunityinsights.org/wp-content/uploads/2018/04/mrc_table2.csv">https://opportunityinsights.org/wp-content/uploads/2018/04/mrc_table2.csv</a><br />
+          <b>Publishing Department:</b> Opportunity Insights<br />
+          <b>Rows:</b> 2,203 <br />
+          <b>Columns:</b> 85 <br />
+          <b>Each row is a: </b> US College<br>
+          <b>License:</b> Publicly available (<a
+            href="https://opportunityinsights.org/data/">https://opportunityinsights.org/data/</a>)<br />
+          <b>Data Readme: </b> <a
+            href="https://opportunityinsights.org/wp-content/uploads/2018/04/Codebook-MRC-Table-2.pdf">https://opportunityinsights.org/wp-content/uploads/2018/04/Codebook-MRC-Table-2.pdf</a>
+          <br />
+          <b>Accessed:</b> <em>February 25, 2020</em><br />
         </p>
 
-        <p class="is-6">
-          <em>Thanks to Person Name for their suggestion to do something with the visualization.</em>
-        </p>
+        <h3><u>Details</u></h3>
 
-        <h2 id="grade">Grade</h2>
+        <p> The data for the visualizations has been sourced by from the <a
+            href="https://opportunityinsights.org/wp-content/uploads/2018/04/mrc_table2.csv">Baseline Cross-Sectional
+            Estimates by College</a> dataset from <a href="https://opportunityinsights.org/">Opportunity Insights</a>.
 
-        <!-- TODO: Remove custom style if no longer needed -->
-        <style>
-          table.grades tbody tr td:nth-child(1),
-          table.grades tbody tr td:nth-child(2) {
-            text-align: center;
-          }
-        </style>
+          <blockquote>
+            <p>
 
-        <!-- TODO: Change or remove table -->
-        <!-- https://bulma.io/documentation/elements/table/ -->
-        <table class="table is-hoverable is-bordered grades">
-          <thead>
-            <tr>
-              <th>Letter</th>
-              <th>Done?</th>
-              <th>Description</th>
-            </tr>
-          </thead>
+              "(The dataset) reports our baseline estimates of parents’ and children’s income distributions by college.
+              We
+              calculate college-level values as means over students in the 1980, 1981 and 1982 birth cohorts. When
+              data for a college from any of these cohorts are incomplete, we use data from 1983 and 1984 cohorts to
+              obtain an estimate."
+            </p>
+            <cite><a
+                href="https://opportunityinsights.org/wp-content/uploads/2018/04/Codebook-MRC-Table-2.pdf">https://opportunityinsights.org/wp-content/uploads/2018/04/Codebook-MRC-Table-2.pdf</a></cite>
+          </blockquote>
 
-          <tbody>
-            <tr>
-              <td>D</td>
-              <td><i class="has-text-success fas fa-check-circle"></i></td>
-              <td>Discussion of how this grade level was satisfied. Exactly how this section should look will depend on the assignment in question. There is no requirement for formatting in this way. This is just an example of what a table element might look like for this informaiton.</td>
-            </tr>
+          <p>The dataset displays records of each US college based on estimated children's income after graduation and
+            estimated parental income for said student. The data is however only based on students in the cohorts
+            between the 1980-1982 window.</p>
+          <p>Some of the more relevant columns are listed below:</p>
+          <ol>
+            <li><strong>super_opeid, name:</strong> Institution OPEID / Cluster ID when combining multiple OPEIDs,
+              College (or group) name</li>
+            <li><strong>type:</strong> public, private non-profit or for-profit </li>
+            <li><strong>tier, tier name:</strong> Published name of airline </li>
+            <li><strong>par_rank:</strong> Encoding for published name of airline</li>
+            <li><strong>par_q[PARQUINT]:</strong> Label for international or domestic flight </li>
+            <li><strong>k_rank: </strong> Mean kid earnings rank </li>
+            <li><strong>k_q[KIDQUINT]:</strong> Fraction of kids in an income quintile [KIDQUINT]. 1 is the bottom
+              quintile and 5 is the top.</li>
+          </ol>
 
-            <tr>
-              <td>C</td>
-              <td><i class="has-text-success fas fa-check-circle"></i></td>
-              <td>Discussion of how this grade level was satisfied.</td>
-            </tr>
+          <h3><u>Filtration</u></h3>
 
-            <tr>
-              <td>B</td>
-              <td><i class="has-text-warning far fa-check-circle"></i></td>
-              <td>Discussion of how this grade level was satisfied.</td>
-            </tr>
+          <p>For this visualization I chose to narrow down on 7 columns. 6 of them are as follows:</p>
 
-            <tr>
-              <td>A</td>
-              <td><i class="has-text-danger fas fa-times-circle"></i></td>
-              <td>Discussion of how this grade level was not satisfied.</td>
-            </tr>
-          </tbody>
 
-        </table>
+          <table class="table is-hoverable is-bordered">
+            <thead>
+              <tr>
+                <th>Column</th>
+                <th>Alias</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  par_rank
+                </td>
+                <td>
+                  Avg. Parent Rank
+                </td>
+                <td>
+                  Mean parental income rank
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  k_rank
+                </td>
+                <td>
+                  Avg. Student Rank
+                </td>
+                <td>
+                  Mean kid earnings rank
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  par_q1
+                </td>
+                <td>
+                  % Parents Q1
+                </td>
+                <td>
+                  Fraction of parents in an income quintile 1. 1 is the bottom quintile and 5 is the top.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  par_q5
+                </td>
+                <td>
+                  % Parents Q5
+                </td>
+                <td>
+                  Fraction of parents in an income quintile 5. 1 is the bottom quintile and 5 is the top.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  k_q1
+                </td>
+                <td>
+                  % Students Q1
+                </td>
+                <td>
+                  Fraction of kids in an income quintile 1. 1 is the bottom quintile and 5 is the top.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  k_q5
+                </td>
+                <td>
+                  % Students Q5
+                </td>
+                <td>
+                  Fraction of kids in an income quintile 5. 1 is the bottom quintile and 5 is the top.
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-        <h2 id="about">About</h2>
+          <p>My decision to filter down to these was largely based on getting percentage values or rank values that have
+            a fixed range so I can justify comparing different values against one-another.</p>
 
-        <!-- Profile box -->
-        <!-- https://bulma.io/documentation/layout/media-object/ -->
-        <article class="media">
-          <!-- TODO: Replace with profile photo -->
-          <figure class="media-left">
-            <p class="image is-128x128"><img class="is-rounded" src="profile.png"></p>
-          </figure>
+          <p>The 7th column is a wrangled column, <b>College Tier (group)</b></p>
 
-          <div class="media-content">
-            <div class="content">
-              <!-- TODO: Replace with contact information -->
-              <p>
-                <strong>Full Name</strong><br/>
-                CS Major, <a href="https://www.usfca.edu/">University of San Francisco</a><br/>
-                <em>Expected Graduation: 20??</em><br/>
-                <i class="fas fa-envelope"></i> <a href="mailto:username@dons.usfca.edu">username@dons.usfca.edu</a>
-              </p>
+          <h3><u>Wrangling</u></h3>
 
-              <!-- TODO: Replace with brief biography -->
-              <p>
-                Here is a brief bio about yourself. A good rule of thumb is to include at least one technical tidbit (favorite area or course within computer science), and one fun tidbit (such as loving dogs).
-              </p>
+          <p><b>College Tier (group)</b> is formed by classifying College Tier data
+            into 2 main categories - <b>Selective - Highly Selective</b> and <b>Less Selective / Insufficient Data</b>.
+            This is encoded by the color of the circles</p>
 
-              <!-- TODO: Replace or remove tags -->
-              <!-- https://bulma.io/documentation/elements/tag/ -->
-              <div class="heading">Skills</div>
+          <p>
+            I have excluded data that appeared to have gaps or lack of documentation. The permissible values for
+            <b>Share Imputed</b> were chosen to be those between 0 and 0.5. <b>Super OPEID</b> values less than zero
+            have been excluded for lack of proper information about the college.
+          </p>
 
-              <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">C</span>
-                <span class="tag">Java</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">SVG</span>
+          <p>
+              I also excluded fields such as average cohort size and percentage of females in college since the readings did not
+              seem to point towards any trends.
+            </p>
+
+          <h1 id="visualizations">Visualizations</h1>
+
+          <p>2 visualizations have been made on this dataset - one is a prototype in Tableau and the other is a
+            visualization in D3.js</p>
+
+
+          <hr>
+          <!-- Scatter-plot-matrix -->
+          <h4 id="scatter-plot-matrix">1.A. <u>Scatterplot Matrix</u> <i>- Tableau Prototype</i> </h4>
+          <img src="Mobility Report Scatter Plot.png" alt="" width="960px">
+          <br>
+          <a class="button is-medium is-info" href="scatterplot-matrix/scatterplot-matrix-tableau.html">
+            <span class="icon is-medium">
+              <i class="fas fa-eye"></i>
+            </span>
+            <span>View Detailed
+              <i class="fas fa-chevron-right" style="margin-left: 5px;"></i>
+            </span>
+          </a>
+          <hr>
+
+          <h4 id="scatterplot-matrix-d3">1.B. <u>Scatterplot Matrix</u> <i>- D3.js</i> </h4>
+          <a class="button is-medium is-info" href="scatterplot-matrix/scatterplot-matrix.html">
+            <span>View D3.js Implementation
+              <i class="fas fa-chevron-right" style="margin-left: 5px;"></i>
+            </span>
+          </a>
+          <hr>
+
+
+          <h1 id="grade">Grade</h1>
+
+          <style>
+            table.grades tbody tr td:nth-child(1),
+            table.grades tbody tr td:nth-child(2) {
+              text-align: center;
+            }
+          </style>
+
+          <table class="table is-hoverable is-bordered grades">
+            <thead>
+              <tr>
+                <th>Letter</th>
+                <th>Done?</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>A</td>
+                <td><i class="has-text-success fas fa-check-circle"></i></td>
+                <td>
+                  Prototyped and implemented a scatterplot matrix.
+                  <ul>
+                    <li>
+                      Have visualized over 4 columns from the dataset (7 columns)
+                    </li>
+                    <li>
+                      Encodings of prototype and visualization match.
+                    </li>
+                    <li>
+                      Placement of scatterplots in matrix match.
+                    </li>
+                  </ul>
+
+
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h1 id="about">About</h1>
+
+          <!-- Profile box -->
+          <!-- https://bulma.io/documentation/layout/media-object/ -->
+          <article class="media">
+            <!-- TODO: Replace with profile photo -->
+            <figure class="media-left">
+              <p class="image is-300x300"><img class="is-rounded" src="profile.jpeg"></p>
+            </figure>
+
+            <div class="media-content">
+              <div class="content">
+                <h4><strong>Pezanne Khambatta</strong></h4>
+                <p>
+
+                  CS Major, <a href="https://www.usfca.edu/">University of San Francisco</a><br />
+                  <em>Expected Graduation: 2022</em><br />
+                  <i class="fas fa-envelope"></i> <a
+                    href="mailto:pkhambatta@dons.usfca.edu">pkhambatta@dons.usfca.edu</a>
+                </p>
+
+                <p>
+                  I am a Masters student in Computer Science at <a href="https://www.usfca.edu/">University of San
+                    Francisco</a>, with a strong background in Industrial Design from <a
+                    href="https://www.risd.edu/">RISD</a>.
+                  I'm from Mumbai, India and have lived in Providence, Seattle and San Francisco over the last 6 years.
+                  My hobbies include music, fitness, photography and off lately, cooking
+                </p>
+
+                <div class="heading">Skills</div>
+
+                <div class="tags">
+                  <span class="tag">Java</span>
+                  <span class="tag">C#</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">C</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                </div>
               </div>
             </div>
-          </div>
-        </article>
-        <!-- End profile box -->
+          </article>
+          <!-- End profile box -->
 
       </div>
       <!-- End page content -->
@@ -342,8 +403,8 @@ You can even put code into these pre blocks.
       </p>
 
       <p>
-        <!-- TODO: Change to link to your Github repository -->
-        <a href="https://github.com/usf-cs360-spring2020/template-bulma" class="button is-small" style="padding-left: 1em; padding-right: 1em;">
+        <a href="https://github.com/usf-cs360-spring2020/homework1-pkhambat1" class="button is-small"
+          style="padding-left: 1em; padding-right: 1em;">
           <i class="fab fa-github-alt"></i>&nbsp;<strong>Github</strong>
         </a>
 
@@ -352,7 +413,8 @@ You can even put code into these pre blocks.
         </a>
 
         <a href="https://bulma.io" class="button is-small">
-          <img src="https://bulma.io/images/made-with-bulma--semiblack.png" alt="Made with Bulma" width="128" height="24">
+          <img src="https://bulma.io/images/made-with-bulma--semiblack.png" alt="Made with Bulma" width="128"
+            height="24">
         </a>
       </p>
     </div>
@@ -360,24 +422,23 @@ You can even put code into these pre blocks.
   <!-- End page footer -->
 
   <!-- Mobile menu responsiveness -->
-  <!-- https://bulma.io/documentation/components/navbar/ -->
   <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
-    if ($navbarBurgers.length > 0) {
-      $navbarBurgers.forEach( el => {
-        el.addEventListener('click', () => {
-          const target = el.dataset.target;
-          const $target = document.getElementById(target);
-          el.classList.toggle('is-active');
-          $target.classList.toggle('is-active');
+      if ($navbarBurgers.length > 0) {
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+          });
         });
-      });
-    }
-  });
+      }
+    });
   </script>
   <!-- End mobile menu responsiveness -->
-  </body>
+</body>
 
 </html>

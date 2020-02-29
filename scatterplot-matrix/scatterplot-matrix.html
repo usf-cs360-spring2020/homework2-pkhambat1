@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Load Bulma from CDN (consider saving it to repository instead) -->
+  <!-- https://bulma.io/ -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <!-- Load Font Awesome 5 (free) icons -->
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link rel="stylesheet" href="scatterplot-matrix.css">
+
+</head>
+
+<body>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="scatterplot-matrix.js"></script>
+
+  <!-- Page header -->
+  <!-- https://bulma.io/documentation/layout/hero/ -->
+  <section class="hero is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title" style="font-size:1.5rem;">Understanding the Role of Colleges in Intergenerational Mobility
+        </h1>
+        <h2 class="subtitle">Using Tableau and D3.js</h2>
+      </div>
+    </div>
+  </section>
+  <!-- End page header -->
+
+  <!-- Page navigation -->
+  <!-- https://bulma.io/documentation/components/navbar/ -->
+  <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <!-- TODO: Change link to repository homepage if needed -->
+        <!-- TODO: Change which navbar-item is-active if needed -->
+        <a class="navbar-item is-active" href="index.html">
+          <span class="icon"><i class="fas fa-home"></i></span>
+          <span>Home</span>
+        </a>
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="main-menu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="main-menu" class="navbar-menu has-text-weight-medium">
+        <!-- Left navbar items -->
+        <div class="navbar-start">
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Visualizations
+            </a>
+
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="/index.html#scatter-plot-matrix">
+                <span>Scatter Plot Matrix (Tableau Prototype)</span>
+              </a>
+
+              <hr class="navbar-divider">
+
+              <a class="navbar-item" href="/scatterplot-matrix/scatterplot-matrix.html">
+                <span>Scatter Plot Matrix (D3.js)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right navbar items -->
+        <div class="navbar-end">
+          <a class="navbar-item" href="/index.html#grade" title="About">
+            <span class="icon"><i class="fas fa-tasks"></i></span>
+            <span>Grade</span>
+          </a>
+
+          <a class="navbar-item" href="/index.html#about" title="About">
+            <span class="icon"><i class="fas fa-info-circle"></i></span>
+            <span>About</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End page navigation -->
+  <div class="back">
+    <a href="/"><i class="fas fa-arrow-left"></i> Back</a>
+  </div>
+  <div style="margin-left:20px;">
+    <h3><u>Scatter Plot Matrix</u> <i>- Tableau</i></h3>
+    <h3 style="font-family: sans-serif;font-weight: 200;padding-top:30px;">Intergenerational College Mobility Report
+      (US)
+    </h3>
+    <div id="scatter-plot-matrix" style="min-height: 700px;">
+
+    </div>
+    <p style="font-family: sans-serif;font-weight: 200;padding-bottom:30px;">
+      Created By: Pezanne Khambatta
+      <br>
+      Source: <a
+        href="https://opportunityinsights.org/wp-content/uploads/2018/04/mrc_table2.csv">https://opportunityinsights.org/wp-content/uploads/2018/04/mrc_table2.csv</a>
+    </p>
+    <div class="content">
+      <blockquote>
+        <h5>
+
+          Acknowledgements:
+        </h5>
+         <p> Scatter Plot Matrix Starter Code: <cite><a href="https://bl.ocks.org/Fil/6d9de24b31cb870fed2e6178a120b17d">https://bl.ocks.org/Fil/6d9de24b31cb870fed2e6178a120b17d</a></cite></p>
+         <p> Legend: <cite><a href="https://www.d3-graph-gallery.com/graph/custom_legend.html">https://www.d3-graph-gallery.com/graph/custom_legend.html</a></cite></p>
+      </blockquote>
+    </div>
+  </div>
+
+</body>

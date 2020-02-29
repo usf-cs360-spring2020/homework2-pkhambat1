@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- Load Bulma from CDN (consider saving it to repository instead) -->
+    <!-- https://bulma.io/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <!-- Load Font Awesome 5 (free) icons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="scatterplot-matrix.css">
+
+</head>
+
+<body>
+    <!-- Page header -->
+    <!-- https://bulma.io/documentation/layout/hero/ -->
+    <section class="hero is-primary is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title" style="font-size:1.5rem;">Understanding the Role of Colleges in Intergenerational
+                    Mobility
+                </h1>
+                <h2 class="subtitle">Using Tableau and D3.js</h2>
+            </div>
+        </div>
+    </section>
+    <!-- End page header -->
+
+    <!-- Page navigation -->
+    <!-- https://bulma.io/documentation/components/navbar/ -->
+    <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <!-- TODO: Change link to repository homepage if needed -->
+                <!-- TODO: Change which navbar-item is-active if needed -->
+                <a class="navbar-item is-active" href="index.html">
+                    <span class="icon"><i class="fas fa-home"></i></span>
+                    <span>Home</span>
+                </a>
+
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                    data-target="main-menu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="main-menu" class="navbar-menu has-text-weight-medium">
+                <!-- Left navbar items -->
+                <div class="navbar-start">
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Visualizations
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="/index.html#scatter-plot-matrix">
+                                <span>Scatter Plot Matrix (Tableau Prototype)</span>
+                            </a>
+
+                            <hr class="navbar-divider">
+
+                            <a class="navbar-item" href="/scatterplot-matrix/scatterplot-matrix.html">
+                                <span>Scatter Plot Matrix (D3.js)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right navbar items -->
+                <div class="navbar-end">
+                    <a class="navbar-item" href="/index.html#grade" title="About">
+                        <span class="icon"><i class="fas fa-tasks"></i></span>
+                        <span>Grade</span>
+                    </a>
+
+                    <a class="navbar-item" href="/index.html#about" title="About">
+                        <span class="icon"><i class="fas fa-info-circle"></i></span>
+                        <span>About</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- End page navigation -->
+
+    <section class="section">
+        <div class="container">
+            <!-- Begin page content -->
+            <div class="content">
+                <a href="/index.html#scatter-plot-matrix">
+                    <i class="fas fa-arrow-left"></i> Back
+                </a>
+
+                <h3><u>Scatter Plot Matrix</u> <i>- Tableau</i></h3>
+
+                <img src="Mobility Report Scatter Plot.png" alt="" style="width: 960px;">
+
+                <h4>Discussion</h4>
+                <p>
+                    The scatter plot matrix takes 6 metrics that are bounded and plots the result of one against another. The percentage values are displayed from 0-100, without dynamic scaling, to provide a fair measure between 2 metrics. Parental Income Rank and Child Income Rank is represented between 0.0 and 1.0.
+                </p>
+                <p>I differenciated the datapoints based on the College Tier (Group), with the intent of observing whether more selective colleges (Ivy Leagues, etc.) actually provide more mobility to low income students. 
+                </p>
+
+                <h4>Observations</h4>
+                <p>
+                    Starting from the most obvious, the diagonal of straight lines serves as visual confirmation that the same values have been graphed against one another in the same order.
+                </p>
+                <p>
+                    There is a correlation between the percentage of students with Q5 (wealthy) parents in a college and the percentage of students that end up wealthy (Q5 students). This can be explained by the face that regardless of educational background, financial support from parents can always help. 
+                </p>
+                <div class="content">
+                    <blockquote>
+                            "access to colleges varies greatly by parent income. For example, children whose parents are in the top 1% of the income distribution are 77 times more likely to attend an Ivy League college than those whose parents are in the bottom income quintile."
+
+                            <cite><a href="https://opportunityinsights.org/paper/mobilityreportcards/">https://opportunityinsights.org/paper/mobilityreportcards/</a></cite>
+                    </blockquote>
+                </div>
+                <p>
+                    It is hard to find a datapoint where both the percentage of Q1 parents of students and that of Q5 children is both high. The correlation implied is strongly inverse, which is rather unfortunate.
+                </p>
+                <p>
+                    Observe the trailing orange dots of the less selective colleges. They seem to favor percentage of Q1 parents more than the selective colleges, implying that Q1 households are mostly capable of sending their children to less selective colleges.
+                </p>
+                <p>
+                    In conclusion, from this dataset, it seems like there is not much upward mobility seen among students, regardless of type of college. That being said, jumping from Q1 to Q5 is monumentally difficult in a timespan of 30-40 years. It would be interesting to see data on non-college-goers that have made it from Q1 into Q5 without the financial burden of tuition.
+                </p>
+
+            </div>
+            <!-- End page content -->
+        </div>
+    </section>
+
+</body>
