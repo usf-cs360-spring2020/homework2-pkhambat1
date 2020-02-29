@@ -130,7 +130,7 @@
 
         <h3><u>Details</u></h3>
 
-        <p> The data for the visualizations has been sourced by from the <a
+        <p> The data for the visualizations has been sourced from the <a
             href="https://opportunityinsights.org/wp-content/uploads/2018/04/mrc_table2.csv">Baseline Cross-Sectional
             Estimates by College</a> dataset from <a href="https://opportunityinsights.org/">Opportunity Insights</a>.
 
@@ -155,12 +155,17 @@
             <li><strong>super_opeid, name:</strong> Institution OPEID / Cluster ID when combining multiple OPEIDs,
               College (or group) name</li>
             <li><strong>type:</strong> public, private non-profit or for-profit </li>
-            <li><strong>tier, tier name:</strong> Published name of airline </li>
-            <li><strong>par_rank:</strong> Encoding for published name of airline</li>
-            <li><strong>par_q[PARQUINT]:</strong> Label for international or domestic flight </li>
+            <li><strong>tier, tier name:</strong> Selectivity and type combination, name for tier no.</li>
+            <li><strong>par_rank:</strong> Mean parental income rank</li>
+            <li><strong>par_q[PARQUINT]:</strong> Fraction of parents in an income quintile [PARQUINT]. 1 is the bottom
+              quintile and 5 is the top. </li>
             <li><strong>k_rank: </strong> Mean kid earnings rank </li>
             <li><strong>k_q[KIDQUINT]:</strong> Fraction of kids in an income quintile [KIDQUINT]. 1 is the bottom
               quintile and 5 is the top.</li>
+            <li><strong>female: </strong> Fraction female among kids</li>
+            <li><strong>count: </strong> Average number of kids per cohort</li>
+            <li><strong>shareimputed: </strong> Share of count-weighted data that was imputed using information from the
+              1983-84 cohorts</li>
           </ol>
 
           <h3><u>Filtration</u></h3>
@@ -264,9 +269,10 @@
           </p>
 
           <p>
-              I also excluded fields such as average cohort size and percentage of females in college since the readings did not
-              seem to point towards any trends.
-            </p>
+            I also excluded fields such as average cohort size and percentage of females in college since the readings
+            did not
+            seem to point towards any trends.
+          </p>
 
           <h1 id="visualizations">Visualizations</h1>
 
